@@ -34,7 +34,7 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: docker build
-      run: docker build -t my-react-app:latest .
+      run: docker build -t codesparrow/my-react-app:latest .
     - name: docker push
       run: docker push codesparrow/react-app
     
