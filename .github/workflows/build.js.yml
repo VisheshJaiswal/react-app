@@ -54,9 +54,9 @@ jobs:
 
     - run: docker build . -t vishesh.azurecr.io/my-react-app:${{ github.sha }}
     
-    - uses: Azure/container-scan@v0
-      with:
-        image-name: vishesh.azurecr.io/my-react-app:${{ github.sha }}
+#     - uses: Azure/container-scan@v0
+#       with:
+#         image-name: vishesh.azurecr.io/my-react-app:${{ github.sha }}
         
     - name: ACR push 
-    - run: docker push vishesh.azurecr.io/my-react-app:${{ github.sha }}
+      run: docker push vishesh.azurecr.io/my-react-app:${{ github.sha }}
